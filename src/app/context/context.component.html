@@ -1,0 +1,21 @@
+<h3>პირდაპირ კონტექსტიდან</h3>
+<div class="container">
+  <div class="row">
+    <div class="card mb-3 col-md-4" *ngFor="let product of testProducts">
+      <h3 class="card-header">{{ product.name }}</h3>
+      <div class="card-body">
+        <img src="{{ product.pictureUrl }}" class="img-fluid" />
+        <h5 class="card-title">{{ product.price }}</h5>
+      </div>
+      <div class="card-body">
+        <p class="card-text">
+          {{ product.description }}
+        </p>
+      </div>
+      <div class="card-body">
+        <a href="#" class="card-link">დეტალურად</a>
+        <a href="#" class="card-link">ყიდვა</a>
+      </div>
+    </div>
+  </div>
+</div>

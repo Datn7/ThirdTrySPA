@@ -1,0 +1,18 @@
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">ამინდის აღწერა</th>
+      <th scope="col">დღე</th>
+      <th scope="col">ცელსიუსი</th>
+      <th scope="col">ფარენგეიტი</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="table-primary" *ngFor="let weather of weathers">
+      <th scope="row">{{ weather.summary }}</th>
+      <th>{{ weather.date }}</th>
+      <th>{{ weather.temperatureC }} C</th>
+      <th>{{ weather.temperatureF }} F</th>
+    </tr>
+  </tbody>
+</table>
