@@ -6,13 +6,27 @@ import { AppComponent } from './app.component';
 import { WeatherComponent } from './weather/weather.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NavbarComponent } from './navbar/navbar.component';
 import { ContextComponent } from './context/context.component';
 import { RepositoryComponent } from './repository/repository.component';
+import { CoreModule } from './core/core.module';
+import { ShopModule } from './shop/shop.module';
+import { HomeModule } from './home/home.module';
 
 @NgModule({
-  declarations: [AppComponent, WeatherComponent, NavbarComponent, ContextComponent, RepositoryComponent],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, BrowserAnimationsModule],
+  declarations: [
+    AppComponent,
+    WeatherComponent,
+    ContextComponent,
+    RepositoryComponent,
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
+    CoreModule,
+    HomeModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

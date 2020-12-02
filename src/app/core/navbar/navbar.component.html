@@ -1,40 +1,40 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
   <img
+    [routerLink]="['/']"
+    routerLinkActive="router-link-active"
     src="/assets/images/myLogo.png"
     style="max-height: 70px; border-radius: 50%; margin-right: 10px"
     alt="logo"
+    class="logo"
   />
-  <a class="navbar-brand" href="#">Navbar</a>
 
   <div class="collapse navbar-collapse" id="navbarColor01">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">მთავარი </a>
-      </li>
       <li class="nav-item">
         <a
-          class="nav-link"
-          [routerLink]="['/context']"
+          [routerLink]="['/']"
           routerLinkActive="router-link-active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          >მთავარი
+        </a>
+      </li>
+      <li class="nav-item">
+        <a [routerLink]="['/shop']" routerLinkActive="router-link-active"
+          >მაღაზიაG</a
+        >
+      </li>
+      <li class="nav-item">
+        <a [routerLink]="['/context']" routerLinkActive="router-link-active"
           >Context</a
         >
       </li>
       <li class="nav-item">
-        <a
-          class="nav-link"
-          [routerLink]="['/repository']"
-          routerLinkActive="router-link-active"
+        <a [routerLink]="['/repository']" routerLinkActive="router-link-active"
           >Repository</a
         >
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Generics</a>
-      </li>
-      <li class="nav-item">
-        <a
-          class="nav-link"
-          [routerLink]="['/weather']"
-          routerLinkActive="router-link-active"
+        <a [routerLink]="['/weather']" routerLinkActive="router-link-active"
           >Weather</a
         >
       </li>

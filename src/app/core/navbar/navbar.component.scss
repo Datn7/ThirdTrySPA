@@ -1,0 +1,35 @@
+.cart-no {
+  position: absolute;
+  min-height: 25px;
+  min-width: 25px;
+  border-radius: 50%;
+  font-size: 1em;
+  background: blueviolet;
+  color: white;
+  text-align: center;
+  top: -12px;
+  right: 32px;
+}
+
+ul > li {
+  margin: 0 5px;
+  font-size: 18px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+
+  &.router-link-active {
+    color: aquamarine;
+    font-weight: bold;
+  }
+}
+
+.logo {
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+}

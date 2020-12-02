@@ -1,0 +1,15 @@
+<header>
+  <span
+    >გაჩვენებთ<strong
+      >{{ (pageNumber - 1) * pageSize + 1 }}
+      -
+      {{
+        pageNumber * pageSize > this.totalCount
+          ? this.totalCount
+          : pageNumber * pageSize
+      }}
+    </strong>
+    ნივთს <strong>{{ this.totalCount }}</strong> პროდუქტიდან</span
+  >
+  <span *ngIf="totalCount === 0">ვერ მოიძებნა ვერცერთი პროდუქტი</span>
+</header>
