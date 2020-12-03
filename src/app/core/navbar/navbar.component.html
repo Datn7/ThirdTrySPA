@@ -45,9 +45,15 @@
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
-      <a class="position-relative">
+      <a
+        [routerLink]="['/basket']"
+        routerLinkActive="router-link-active"
+        class="position-relative"
+      >
         <i class="fas fa-shopping-basket fa-2x mr-3 text-white"></i>
-        <div class="cart-no">5</div>
+        <div *ngIf="basket$ | async as basket" class="cart-no">
+          {{ basket.items.length }}
+        </div>
       </a>
       <input class="form-control mr-sm-2" type="text" placeholder="ძებნა" />
       <button class="btn btn-secondary my-2 my-sm-0" type="submit">
